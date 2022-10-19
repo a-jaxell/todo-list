@@ -14,18 +14,30 @@ h1{
     background-color: white;
     text-align: center;
     box-shadow: 1px 1px 10px #c59d9e;
-    animation: 0.5s alternate dropin;
+    /* animation: 0.5s alternate dropin; */
     animation-delay: 0.5s;
     min-width: 30em;
     height: fit-content;
     
+    
 }
 .container>h1{
-   margin-bottom: 0px; 
+    animation: 0.5s ease-in fade-in;
+    animation-delay: 1s;
+    margin-bottom: 0px;
+     
 }
 .container>input{
     font-size: 25px;
     margin-right: 5px;
+}
+.alert{
+    color: red;
+    font-style: italic;
+    animation: 1s forwards blink-three;
+}
+li{
+    font-size: 25px;
 }
 
 
@@ -34,4 +46,17 @@ h1{
     50% {margin-top: 75px;}
     100%{margin-top: 0px;}
     
+}
+
+@keyframes fade-in{
+    0%  {opacity: 0;}
+    100% {opacity: 1;};
+}
+
+@keyframes blink-three{
+    0% {opacity: 1;}
+    25%{opacity: 0;}
+    50%{opacity: 1;}
+    75%{opacity: 0;}
+    100%{opacity: 1;}
 }
