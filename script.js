@@ -42,3 +42,13 @@ function addTask(){
 
 // Helper Functions
 
+// Toggles class from to completed
+function toggleDone(e){
+    let item = e.target.parentNode;
+    if(item.getAttribute('class') == 'completed'){
+        item.setAttribute('class', '');
+    } else {
+        item.setAttribute('class', 'completed');
+    }
+}
+
