@@ -21,6 +21,11 @@ h1{
 .container>h1{
    margin-bottom: 0px; 
 }
+.container>input{
+    font-size: 25px;
+    margin-right: 5px;
+}
+
 
 @keyframes dropin {
     0% {margin-top: -500px;}
