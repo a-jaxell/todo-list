@@ -13,6 +13,7 @@ const promptDefault = "";
 // Event listeners
 
 addBtn.addEventListener('click', addTask);
+list.addEventListener('click', handleDeleteOrCheck);
 
 
 // Functions
@@ -39,10 +40,19 @@ function addTask(){
     }
     input.value = "";
 }
+function handleDeleteOrCheck(e){
+    // let item = e.target;
+    if(e.target.parentNode == list){
+        toggleDone(e);
+    } else {
+        deleteTodo(e);
+    }
+}
+
 
 // Helper Functions
 
-// Toggles class from to completed
+// Toggles completed class
 function toggleDone(e){
     let item = e.target.parentNode;
     if(item.getAttribute('class') == 'completed'){
@@ -52,3 +62,11 @@ function toggleDone(e){
     }
 }
 
+// Deletes parent element if trashcan is clicked
+
+function deleteTodo(e){
+    let item = e.target.parentNode;
+    if(e.target.innerHTML == '&#x1F5D1' ){
+        item.remove();
+    }
+}
