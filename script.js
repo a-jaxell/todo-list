@@ -54,7 +54,7 @@ function handleDeleteOrCheck(e){
 function toggleDone(e){
     let item = e.target;
     if(item.getAttribute('class') == 'completed'){
-        item.setAttribute('class', '');
+        item.setAttribute('class', 'uncompleted');
     } else {
         item.setAttribute('class', 'completed');
     }
