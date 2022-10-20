@@ -27,7 +27,7 @@ h1 {
   animation-delay: 1.5s;
   margin-bottom: 0px;
 }
-.container > p {
+.container > .stats {
   opacity: 0;
   animation: 1s fade-in forwards;
   animation-delay: 1.75s;
@@ -42,7 +42,11 @@ h1 {
 .alert {
   color: red;
   font-style: italic;
-  animation: 1s blink-three forwards;
+  animation: .3s fade-in;
+  animation-iteration-count: 3;
+}
+.unalert {
+    color: white;
 }
 li {
   font-size: 25px;
