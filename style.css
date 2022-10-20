@@ -35,7 +35,7 @@ h1{
 .alert{
     color: red;
     font-style: italic;
-    animation: 1s forwards blink-three;
+    animation: 1s backwards blink-three;
 }
 li{
     font-size: 25px;
@@ -47,6 +47,10 @@ li>span{
 li>span:hover{
     text-decoration: line-through;
     cursor: pointer;
+}
+.trashcan{
+    opacity: .5;
+    font-size: 18px;
 }
 .trashcan:hover{
     text-decoration: none;
