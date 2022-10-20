@@ -44,11 +44,13 @@ h1{
 .alert{
     color: red;
     font-style: italic;
-    animation: 1s backwards blink-three;
+    animation: 1s blink-three forwards;
 }
 li{
     font-size: 25px;
     list-style: none;
+    transform: translateY(100%);
+    animation: slide-up 0.5s forwards, fade-in 0.5s forwards;
 }
 li>span{
     margin-right: 10px;
