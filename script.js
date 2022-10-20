@@ -41,20 +41,18 @@ function addTask(){
     input.value = "";
 }
 function handleDeleteOrCheck(e){
-    // let item = e.target;
-    if(e.target.parentNode == list){
+
+    if(e.target.innerHTML != '🗑'){
         toggleDone(e);
     } else {
         deleteTodo(e);
     }
 }
-
-
 // Helper Functions
 
 // Toggles completed class
 function toggleDone(e){
-    let item = e.target.parentNode;
+    let item = e.target;
     if(item.getAttribute('class') == 'completed'){
         item.setAttribute('class', '');
     } else {
@@ -66,7 +64,7 @@ function toggleDone(e){
 
 function deleteTodo(e){
     let item = e.target.parentNode;
-    if(e.target.innerHTML == '&#x1F5D1' ){
+    if(e.target.innerHTML == '🗑'){
         item.remove();
     }
 }
