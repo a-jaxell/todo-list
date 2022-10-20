@@ -37,12 +37,13 @@ function addTask(){
         const trashcan = document.createElement('span');
         trashcan.innerHTML = '&#x1F5D1';
         listItem.appendChild(trashcan);
+        trashcan.setAttribute('class', 'trashcan');
     }
     input.value = "";
 }
 function handleDeleteOrCheck(e){
 
-    if(e.target.innerHTML != '🗑'){
+    if(e.target.getAttribute('class') != 'trashcan'){
         toggleDone(e);
     } else {
         deleteTodo(e);
@@ -64,7 +65,7 @@ function toggleDone(e){
 
 function deleteTodo(e){
     let item = e.target.parentNode;
-    if(e.target.innerHTML == '🗑'){
+    if(e.target.getAttribute('class') == 'trashcan'){
         item.remove();
     }
 }
