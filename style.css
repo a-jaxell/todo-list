@@ -44,7 +44,14 @@ li{
 li>span{
     margin-right: 10px;
 }
-
+li>span:hover{
+    text-decoration: line-through;
+    cursor: pointer;
+}
+.trashcan:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
 .completed{
     text-decoration: line-through;
     opacity: 0.5;
