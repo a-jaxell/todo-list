@@ -51,11 +51,15 @@ h1 {
 .unalert {
     color: white;
 }
+ul {
+    margin-bottom: 20px;
+}
 li {
   font-size: 25px;
   list-style: none;
   transform: translateY(100%);
   animation: slide-up 0.5s forwards, fade-in 0.5s forwards;
+  margin-top: 10px;
 }
 li > span {
   margin-right: 10px;
@@ -64,15 +68,12 @@ li > span:hover {
   text-decoration: line-through;
   cursor: pointer;
 }
-.listcontainer {
-    margin: 8px 8px 20px 8px;
-}
 .listcontainer > li {
   animation: 1s linear slide-up;
 }
 .trashcan {
   opacity: 0.5;
-  font-size: 18px;
+  font-size: 12px;
 }
 .trashcan:hover {
   text-decoration: none;
