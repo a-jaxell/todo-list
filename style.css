@@ -40,19 +40,19 @@ h1 {
   opacity: 0;
 }
 #alertBox {
-    margin: 8px;
+  margin: 8px;
 }
 .alert {
   color: red;
   font-style: italic;
-  animation: .3s fade-in;
+  animation: 0.3s fade-in;
   animation-iteration-count: 3;
 }
 .unalert {
-    color: white;
+  color: white;
 }
 ul {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 li {
   font-size: 25px;

@@ -9,8 +9,8 @@ const stats = document.querySelector(".stats");
 //Global variables
 
 let counter = 0;
-const promptError = 'alert';
-const promptDefault = 'unalert';
+const promptError = "alert";
+const promptDefault = "unalert";
 
 // Event listeners
 
@@ -21,10 +21,10 @@ list.addEventListener("click", handleDeleteOrCheck);
 
 function addTask() {
   if (input.value.length == 0) {
-    errorMsg.setAttribute('class', promptError);
+    errorMsg.setAttribute("class", promptError);
     return;
-} else {
-    errorMsg.setAttribute('class', promptDefault);
+  } else {
+    errorMsg.setAttribute("class", promptDefault);
     const text = input.value;
 
     const listItem = document.createElement("li");
