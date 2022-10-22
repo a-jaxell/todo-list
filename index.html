@@ -9,12 +9,12 @@
     <title>todo-list</title>
   </head>
   <body>
-    <div class="container">
-      <h1>My ToDo</h1>
-      <p class="stats">0 completed</p>
-      <input type="text" name="OK" id="input" />
-      <input type="button" value="OK" id="addBtn" />
-      <p id="alertBox" class="unalert">Input must not be empty</p>
+    <div class="container container--animation">
+      <h1 class="header header--animation">My ToDo</h1>
+      <p class="container__stats container__stats--animation">0 completed</p>
+      <input id="input" class="container__input container__input--animation" type="text" />
+      <input id="addBtn" class="container__input container__input--animation" type="button" value="OK" />
+      <p id="alertBox" class="alertBox--unalert">Input must not be empty</p>
 
       <div class="listcontainer">
         <ul id="list"></ul>

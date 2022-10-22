@@ -4,13 +4,13 @@ const list = document.querySelector("#list");
 const addBtn = document.querySelector("#addBtn");
 const input = document.querySelector("#input");
 const errorMsg = document.querySelector("#alertBox");
-const stats = document.querySelector(".stats");
+const stats = document.querySelector(".container__stats");
 
 //Global variables
 
 let counter = 0;
-const promptError = "alert";
-const promptDefault = "unalert";
+const promptError = "alertBox--alert";
+const promptDefault = "alertBox--unalert";
 
 // Event listeners
 
@@ -33,6 +33,10 @@ function addTask() {
     const itemText = document.createElement("span");
     listItem.appendChild(itemText);
     itemText.innerText = text;
+    listItem.setAttribute("class", "list__listItem");
+    listItem.classList.add("list__listItem--animation");
+    itemText.classList.add("list__listItem--line-through");
+
 
     const trashcan = document.createElement("span");
     trashcan.innerHTML = "&#x1F5D1";
@@ -53,12 +57,15 @@ function handleDeleteOrCheck(e) {
 // Toggles completed class
 function toggleDone(e) {
   let item = e.target;
-  if (item.getAttribute("class") == "completed") {
-    item.setAttribute("class", "uncompleted");
+  if (item.classList.contains("list__listItem--completed")){
+    item.classList.remove("list__listItem--completed");
+    item.classList.add("list__listItem--uncompleted");
     modifyCounter(0);
     stats.innerText = counter + " completed";
   } else {
-    item.setAttribute("class", "completed");
+    item.classList.add("list__listItem--completed");
+    item.classList.remove("list__listItem--uncompleted");
+    //item.setAttribute("class", "list__listItem--completed");
     modifyCounter(1);
     stats.innerText = counter + " completed";
   }
