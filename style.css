@@ -10,7 +10,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .container {
-  margin-top: -500px;
+  transform: translateY(-150%);
   background-color: white;
   text-align: center;
   box-shadow: 1px 1px 10px #c59d9e;
@@ -18,18 +18,18 @@ body {
   height: fit-content;
 }
 .container--animation {
-  animation: 1.25s dropin forwards;
+  animation: 1.25s container-dropin forwards;
   animation-delay: 0.5s;
 }
-@keyframes dropin {
-  0% {
-    margin-top: -500px;
+@keyframes container-dropin {
+  0%{
+    transform: translateY(-150%);
   }
-  50% {
-    margin-top: 75px;
+  50%{
+    transform: translateY(25%);
   }
-  100% {
-    margin-top: 0px;
+  100%{
+    transform: translate(0%);
   }
 }
 .header {
